@@ -1,0 +1,34 @@
+
+disclaimer: sebab saya tidak mendapatkan balasan jawaban chat atas pertanyaan soal 2, 
+            jadi saya mengasumsikan pada line terakhir cool triangle terdapat 
+            jumlah bintang input / 2 dibulatkan ke bawah 
+
+function coolTriangle(input) {
+  let star = '*'
+  let space=''
+  let index, result 
+  if(input < 1) {
+    return ""
+  } else if (input === 1) {
+    return '*'
+  } else {
+    let lastLine = ''    
+    result = `*`
+    for(index = 0; index < input-1; index++) {
+      if (input > 2 && index===1) continue
+      if(index > 0) space += ' '
+      result = `${result}\n${star}${space}${star}`      
+    }
+    if(input > 2) {
+      for(index = 0; index < input; index++) {
+        if(index % 2 !== 0) lastLine += '*'      
+      }
+      return `${result}\n${lastLine}`
+    }else{
+      return result
+    }    
+    
+  }
+}
+
+console.log(coolTriangle(1))

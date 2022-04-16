@@ -1,0 +1,24 @@
+nav.navbar {
+    position: absolute !important;
+    display:block;
+    margin-top: 0;
+    width: 100%;
+    background-color: #F5F5F5 !important;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 80px auto;
+    gap: 0px;
+    padding: 0px;
+}
+
+ul.logout {
+    min-width: 5rem;
+}
+
+ul.logout:hover {
+    cursor: pointer;
+}

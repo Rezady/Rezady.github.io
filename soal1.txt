@@ -1,0 +1,37 @@
+function palindrom (sentence) {
+	let result = {
+  	total: 0,
+    words: [],
+    validIndex: [],
+    invalidIndex: []
+  }    
+  let sentenceArray = sentence.split(' ')
+  let index = 0
+  for(index in sentenceArray) {
+  	let valid = checkPalindrom(sentenceArray[index])
+    if(valid) {
+      result.total +=1
+      result.words = [...result.words, sentenceArray[index]]
+      result.validIndex = [...result.validIndex, index]
+    } else {
+    	result.invalidIndex = [...result.invalidIndex, index]
+    }
+  }
+  return result
+}
+
+function checkPalindrom (word) {
+  let middle = Math.floor(5/2)
+  let wordLength = word.length
+  let result = true
+  let index
+  for (index = 0; index < middle; index++) {
+    if(word[index] !== word[wordLength-1-index]) {
+    	return false
+    }
+  }
+ return result 
+}
+
+
+console.log(palindrom('aka seorang baba baab'))

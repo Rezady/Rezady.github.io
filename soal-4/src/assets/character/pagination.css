@@ -1,0 +1,4 @@
+.pagination-character:hover {
+    cursor: pointer;
+    float: right;
+}

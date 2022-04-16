@@ -1,0 +1,38 @@
+.body-login {
+    width: 100vw !important;
+    height: 100vh !important;
+}
+
+.grid-login {
+    display: grid;
+    grid-template-columns: 60% auto;       
+}
+div.title-login {
+    height: 100vh !important;
+    display: grid;
+    align-content: center;
+    justify-content: end !important;
+    padding-right: 10%;
+    grid-template-columns: 50% !important;
+}
+p.title-swabio {    
+    font-size: 100px !important;
+    margin-block-end: 0 !important;
+}
+
+p.title-description {
+    font-size: 20px !important;
+}
+
+.form-login {
+    display: grid;
+    background-color: #F5F4F4 !important;   
+    align-content: center;     
+}
+
+.box-login {
+    width: 70% !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    border-radius: 5px;   
+    margin-left: -10%;
+}

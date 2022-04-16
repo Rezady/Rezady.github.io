@@ -1,0 +1,14 @@
+.flex-card {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 85%;
+    justify-content: space-between;
+    margin-left: 10%;
+    overflow: hidden;    
+}
+
+.flex-card > .card {
+    margin: 0;
+    width: 40% !important;
+}

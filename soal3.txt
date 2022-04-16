@@ -1,0 +1,28 @@
+function convertObject(object) {
+  let result = {};
+  let splitWord = [];
+  let element;
+  for (element in object) {
+    splitWord = element.split(".");
+    if (splitWord.length === 1) {
+      result[splitWord[0]] = object[element];
+    } else if (splitWord.length === 2) {
+      if (!result[splitWord[0]]) {
+        result[splitWord[0]] = {};
+      }
+      result[splitWord[0]][splitWord[1]] = object[element];
+    }
+  }
+  return result;
+}
+let res = {
+  "address.street": "jalan sakura",
+  "address.provice": "banten",
+  "address.city": "tangerang",
+  "person.name": "john",
+  "person.email": "john@doe.com",
+  userType: "admin",
+  accessLevel: "QA"
+};
+let reeess = { "hoho.hehe": "heheo" };
+console.log(convertObject(res));
